@@ -64,6 +64,19 @@ Field validation runs performed at the Ramaiah Playground confirmed the performa
 * **6 to 12 Meters:** **90% Detection & Classification Accuracy**. Skeletons are tightly pinned down with absolute geometric tracking stability[cite: 10].
 * **12 to 16 Meters:** **76% Accuracy**. High altitude profiles introduce keypoint spatial jitter due to pixel pixelization
 
+## Core Application Implementation
+
+The primary execution and edge inference script is structured within the root source directory:
+
+*  <a href="./Distressdetection.py" target="_blank">Distressdetection.py</a> — The production-ready Python deployment script executing multi-threaded processing layers at the edge. It concurrently coordinates high-frequency video capture loops, real-time 17-keypoint skeletal tracking, kinematic posture classification filters, and asynchronous PyMAVLink autopilot register telemetry queries.
+
+---
+
+###  Core Modules & Logic Streams
+
+1. **Multi-Threaded Video Pipeline:** Captures raw visual inputs directly via high-fps camera interfaces, optimizing CPU memory allocation by segregating individual image frames into a clean, non-blocking inference queue.
+2. **Kinematic Threshold Engine:** Parses real-time node strings output by the quantized YOLOv8-Pose model, calculating the exact spatial differences between wrists and shoulders to isolate valid rescue signals.
+3. **Emergency Payload Broadcaster:** Intercepts live latitude and longitude streams via the local Pixhawk instrumentation layer to assemble dynamic Google Maps hyperlinks, routing them instantly alongside annotated image metadata buffers through the Telegram Bot API.
 ## Project Documentation
 
 The complete engineering documentation and presentation materials are structured in the <a href="./Documentation/" target="_blank">Documentation</a> directory:
