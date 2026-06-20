@@ -63,3 +63,12 @@ Field validation runs performed at the Ramaiah Playground confirmed the performa
 
 * **6 to 12 Meters:** **90% Detection & Classification Accuracy**. Skeletons are tightly pinned down with absolute geometric tracking stability[cite: 10].
 * **12 to 16 Meters:** **76% Accuracy**. High altitude profiles introduce keypoint spatial jitter due to pixel pixelization
+## Project Documentation
+
+The complete engineering documentation and presentation materials are structured in the <a href="./Documentation/" target="_blank">Documentation</a> directory:
+
+*  <a href="./Documentation/Human%20Distress%20Detection%20Thesis.pdf" target="_blank">Project Thesis</a> — A comprehensive engineering dissertation detailing the mathematical core (kinematic spatial tracking), quantized YOLOv8-Pose model optimization, and experimental field validation[cite: 10].
+*  <a href="./Documentation/Human%20Detection%20presentation.pdf" target="_blank">Seminar Slides</a> — Technical presentation slides outlining the core hardware architecture (F450 chassis), Edge-AI inference loops, and real-time MAVLink telemetry alerting systems[cite: 9, 10].
+
+---
+
